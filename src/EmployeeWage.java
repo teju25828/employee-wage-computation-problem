@@ -5,7 +5,7 @@ public class EmployeeWage {
         int wagePerHour=20,fullDayHour=8, wagePerDay,partTimeHour=4;
         int rand = (int) (Math.random() * 3);
         System.out.println(rand);
-        if (rand == 1) {
+        /*if (rand == 1) {
             System.out.println("employee is present");
             wagePerDay=wagePerHour*fullDayHour;
             System.out.println("wage for day=> "+wagePerDay);
@@ -16,6 +16,21 @@ public class EmployeeWage {
         }
         else {
             System.out.println("employee is absent");
+        }*/
+        switch(rand)
+        {
+            case 0:
+                System.out.println("employee is Absent");
+                break;
+            case 1:
+                System.out.println("employee is present");
+                wagePerDay=wagePerHour*fullDayHour;
+                System.out.println("wage for day=> "+wagePerDay);
+                break;
+            case 3 :
+                System.out.println("Employee working as part time ");
+                wagePerDay=wagePerHour*partTimeHour;
+                System.out.println("wage for day=> "+wagePerDay);
         }
     }
 }
