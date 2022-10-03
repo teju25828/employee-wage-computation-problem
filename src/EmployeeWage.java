@@ -17,21 +17,23 @@ public class EmployeeWage {
         else {
             System.out.println("employee is absent");
         }*/
-        int i = 0;
-        while (i < workingDaysPerMonth) {
+        int i = 0,j=0;
+        while (i < workingDaysPerMonth && j<100) {
+            i++;
+            j++;
             rand = (int) (Math.random() * 3);
             switch (rand) {
                 case 0:
-                    System.out.println("Day " + (i + 1) + " employee is Absent");
+                    System.out.println("Day " + i + " employee is Absent");
                     break;
                 case 1:
-                    System.out.println("Day " + (i + 1) + " employee is present");
+                    System.out.println("Day " + i + " employee is present");
                     wagePerDay = wagePerHour * fullDayHour;
                     wagesForMonth = wagesForMonth + wagePerDay;
                     System.out.println("wage for day=> " + wagePerDay);
                     break;
                 case 3:
-                    System.out.println("Day " + (i + 1) + " Employee working as part time ");
+                    System.out.println("Day " + i + " Employee working as part time ");
                     wagePerDay = wagePerHour * partTimeHour;
                     wagesForMonth = wagesForMonth + wagePerDay;
                     System.out.println("wage for day=> " + wagePerDay);
